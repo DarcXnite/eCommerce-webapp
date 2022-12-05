@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import styles from './styles/Navbar.module.css'
 
-import axe from '../public/assets/axe.jpg'
+import logo from '../public/assets/arondight-logo.png'
 
 const links = [
   { name: 'Home' },
@@ -15,7 +14,7 @@ const links = [
 export default function Navbar() {
   const allLinks = links.map(link => {
     return (
-      <li>
+      <li className='inter drop-shadow'>
         <a href='#'>{link.name}</a>
       </li>
     )
@@ -23,8 +22,8 @@ export default function Navbar() {
 
   return (
     <nav className='bg-aro-green'>
-      <Image className={styles.axeImg} src={axe} alt='axe' />
-      <ul className='flex justify-between'>{allLinks}</ul>
+      <Image className='logo' src={logo} alt='axe' />
+      <ul className='flex justify-around bg-aro-tan-dark'>{allLinks}</ul>
     </nav>
   )
 }

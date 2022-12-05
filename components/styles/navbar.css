@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@200&display=swap');
+
+.logo {
+  width: 282px;
+  height: 302px;
+  margin: 0 auto;
+}
+
+.inter {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.poppins {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+li a {
+  text-shadow: 2px 2px 3px gray;
+}
