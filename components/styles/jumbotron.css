@@ -1,0 +1,19 @@
+.j-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1040px) {
+  .j-img {
+    height: 635px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .j-img {
+    height: 810px;
+    object-fit: cover;
+  }
+}

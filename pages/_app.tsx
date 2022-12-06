@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import '../components/styles/navbar.css'
+import '../components/styles/footer.css'
+import '../components/styles/jumbotron.css'
 import type { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@600&display=swap');
 
 .logo {
   width: 282px;
@@ -16,4 +16,15 @@
 
 li a {
   text-shadow: 2px 2px 3px gray;
+}
+
+.icons-container {
+  width: 17rem;
+}
+
+.icons {
+  fill: white;
+  width: 25px;
+  height: 24px;
+  filter: drop-shadow(2px 2px 3px gray);
 }
