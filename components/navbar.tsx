@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 import logo from '../public/assets/arondight-logo.png'
@@ -32,29 +34,47 @@ const links = [
 ]
 
 export default function Navbar() {
+  const router = useRouter()
+
   const allLinks = links.map(link => {
     return (
-      <li key={link.name} className='inter drop-shadow'>
-        <a href={link.href}>{link.name}</a>
-      </li>
+      <Link
+        href={link.href}
+        key={link.name}
+        className='inter drop-shadow w-full'
+      >
+        <li
+          className={`flex items-center justify-center ${
+            router.pathname === link.href ? 'text-aro-green' : ''
+          }`}
+        >
+          {link.name}
+        </li>
+      </Link>
     )
   })
 
   return (
     <div className='bg-aro-green'>
       <Image className='logo py-2' src={logo} alt='arondight-logo' />
-      <nav className='flex justify-between bg-aro-tan-dark'>
-        <div className='w-2/4 my-2'>
-          <ul className='flex justify-around'>{allLinks}</ul>
+      <nav className='flex flex-col md:flex-row justify-between bg-aro-tan-dark'>
+        <div className='md:w-2/4 my-2'>
+          <ul className='flex flex-col md:flex-row items-center justify-center md:justify-around'>
+            {allLinks}
+          </ul>
         </div>
-        <div className='flex justify-between icons-container mr-5 items-center'>
+        <div className='flex justify-around pb-2 md:pb-0 md:mr-5 items-center'>
           <input
             className='rounded-lg bg-white p-0.5 placeholder:text-slate'
             type='text'
             placeholder='Search here...'
           />
-          <i>{userCircle}</i>
-          <i>{shoppingCart}</i>
+          <i>
+            <Link href='/account'>{userCircle}</Link>
+          </i>
+          <i>
+            <Link href='/cart'>{shoppingCart}</Link>
+          </i>
         </div>
       </nav>
     </div>
