@@ -38,11 +38,7 @@ export default function Navbar() {
 
   const allLinks = links.map(link => {
     return (
-      <Link
-        href={link.href}
-        key={link.name}
-        className='inter drop-shadow w-full'
-      >
+      <Link href={link.href} key={link.name} className='inter drop-shadow'>
         <li
           className={`flex items-center justify-center ${
             router.pathname === link.href ? 'text-aro-green' : ''
@@ -65,11 +61,11 @@ export default function Navbar() {
         </div>
         <div className='flex justify-around pb-2 md:pb-0 md:mr-5 items-center'>
           <input
-            className='rounded-lg bg-white p-0.5 placeholder:text-slate'
+            className='rounded-lg bg-white p-0.5 placeholder:text-slate md:mr-5'
             type='text'
             placeholder='Search here...'
           />
-          <i>
+          <i className='md:mr-5'>
             <Link href='/account'>{userCircle}</Link>
           </i>
           <i>

@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 import Login from '../components/login'
 import Jumbotron from '../components/jumbotron'
+import ProductLinks from '../components/productLinks'
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,9 @@ const Home: NextPage = () => {
         <Navbar />
         <Jumbotron />
         <Featured />
+      </section>
+      <section>
+        <ProductLinks />
       </section>
     </>
   )
