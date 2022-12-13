@@ -6,7 +6,8 @@ import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 import Login from '../components/login'
 import Jumbotron from '../components/jumbotron'
-import ProductLinks from '../components/productLinks'
+import ProductsCollage from '../components/productsCollage/productsCollage'
+import FeaturedProducts from '../components/featuredProducts/featuredProducts'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,10 @@ const Home: NextPage = () => {
         <Featured />
       </section>
       <section>
-        <ProductLinks />
+        <ProductsCollage />
+      </section>
+      <section>
+        <FeaturedProducts />
       </section>
     </>
   )
