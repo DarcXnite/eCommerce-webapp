@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { FC } from 'react'
 
 import logo from '../public/assets/arondight-logo.png'
+
+interface NavbarProps {
+  toggleLoginModal?: React.MouseEventHandler<HTMLButtonElement>
+}
 
 const userCircle = (
   <svg
@@ -33,7 +37,7 @@ const links = [
   { name: 'Contact Us', href: '/contact' },
 ]
 
-export default function Navbar() {
+const Navbar: FC<NavbarProps> = ({ toggleLoginModal }): JSX.Element => {
   const router = useRouter()
 
   const allLinks = links.map(link => {
@@ -76,3 +80,5 @@ export default function Navbar() {
     </div>
   )
 }
+
+export default Navbar

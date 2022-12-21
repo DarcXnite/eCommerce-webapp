@@ -1,6 +1,7 @@
 import React from 'react'
+import type { NextPage } from 'next'
 
-function About() {
+const About: NextPage = () => {
   return <div>About</div>
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import type { NextPage } from 'next'
 
-function Newarrivals() {
+const Newarrivals: NextPage = () => {
   return <div>New Arrivals</div>
 }
 

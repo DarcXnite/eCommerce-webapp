@@ -1,5 +1,8 @@
 import React from 'react'
+import type { NextPage } from 'next'
 
-export default function Cart() {
+const Cart: NextPage = () => {
   return <div>Cart</div>
 }
+
+export default Cart

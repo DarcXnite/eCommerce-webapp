@@ -1,6 +1,7 @@
 import React from 'react'
+import type { NextPage } from 'next'
 
-function Contact() {
+const Contact: NextPage = () => {
   return <div>Contact</div>
 }
 

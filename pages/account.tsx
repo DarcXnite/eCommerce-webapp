@@ -1,5 +1,8 @@
 import React from 'react'
+import type { NextPage } from 'next'
 
-export default function Account() {
+const Account: NextPage = () => {
   return <div>Account</div>
 }
+
+export default Account
